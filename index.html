@@ -2,192 +2,130 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Reynolds Painting & Resurfacing LLC – Professional painting services Valley Wide. Free estimates. Quality guaranteed."/>
   <title>Reynolds Painting & Resurfacing LLC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
       margin: 0;
-      padding: 0;
-      line-height: 1.6;
+      font-family: 'Roboto', sans-serif;
+      background: #f4f4f4;
+      color: #333;
     }
-    header, footer {
-      background-color: #003366;
+    header {
+      background: #1e4d7d;
       color: white;
-      padding: 1em 2em;
+      padding: 1rem 2rem;
       text-align: center;
     }
-    .container {
-      padding: 2em;
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    .tagline {
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+    nav {
+      background: #357ab7;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: white;
+      margin: 0.5rem 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .section {
+      padding: 2rem;
       max-width: 900px;
       margin: auto;
     }
-    h1, h2, h3 {
-      color: #003366;
+    .services, .contact {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-top: 1rem;
+    }
+    h2 {
+      color: #1e4d7d;
     }
     ul {
-      list-style-type: square;
-      padding-left: 1.2em;
+      padding-left: 1.2rem;
     }
-    a {
-      color: #003366;
+    .contact-info a {
+      color: #1e4d7d;
       text-decoration: none;
+      display: block;
+      margin: 0.5rem 0;
     }
-    .highlight {
+    footer {
       text-align: center;
-      margin-top: 2em;
-      font-weight: bold;
-      font-size: 1.2em;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+    .img-banner {
+      width: 100%;
+      max-width: 1000px;
+      display: block;
+      margin: 1rem auto;
+      border-radius: 10px;
+    }
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.5rem; }
+      .tagline { font-size: 0.9rem; }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Reynolds Painting & Resurfacing LLC</h1>
-    <p>I'll paint your house as I would my own — there's no shortcuts.</p>
+    <div class="tagline">Painting Perfection One Surface at a Time</div>
   </header>
-  <div class="container">
-    <section>
-      <h2>About Us</h2>
-      <p>
-        At Reynolds Painting & Resurfacing LLC, we provide trusted, professional painting services across the Valley Wide Area. We handle both residential and commercial properties and offer free estimates and over-the-phone consultations at your convenience.
-      </p>
-    </section>
-    <section>
-      <h2>Services</h2>
-      <ul>
-        <li>Interior & exterior painting</li>
-        <li>Drywall repair & patching</li>
-        <li>Cabinet & surface refinishing</li>
-        <li>Commercial/residential repainting</li>
-        <li>Custom color matching</li>
-        <li>Pressure washing prep</li>
-        <li>Discounts available — lower prices than other licensed LLCs</li>
-      </ul>
-    </section>
-    <section>
-      <h2>Why Choose Us?</h2>
-      <ul>
-        <li>Licensed & reliable</li>
-        <li>Affordable pricing</li>
-        <li>Clean, efficient work</li>
-        <li>Fast scheduling</li>
-        <li>Locally owned & operated</li>
-      </ul>
-    </section>
-    <section>
-      <h2>Contact Us</h2>
-      <p><strong>Phone:</strong> <a href="tel:6025267364">602-526-7364</a></p>
-      <p><strong>Email:</strong> <a href="mailto:azreynoldspaintingllc@gmail.com">azreynoldspaintingllc@gmail.com</a></p>
-      <p><strong>Facebook:</strong> <a href="https://facebook.com/Reynolds-Painting-and-Resurfacing-LLC" target="_blank">Reynolds Painting and Resurfacing LLC</a></p>
-      <p><strong>Free estimates. Call or message anytime!</strong></p>
-    </section>
-    <div class="highlight">
-      <p>REYNOLDS PAINTING & RESURFACING LLC</p>
-      <p>(Your go-to trusted painting professionals)</p>
-      <p>Painting Perfection one surface at a time.</p>
+
+  <img src="https://raw.githubusercontent.com/bigdaddyaz82/reynolds-painting-site/main/reynolds-banner.jpg" alt="Reynolds Painting banner" class="img-banner"/>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="section" id="about">
+    <h2>About Us</h2>
+    <p>Reynolds Painting & Resurfacing LLC is a locally owned, trusted professional painting company serving the Valley Wide area. We specialize in residential and commercial painting, offering high-quality results at lower prices than most LLCs. We take pride in our motto: <strong>“I’ll paint your house as I would my own – there’s no shortcuts.”</strong></p>
+  </section>
+
+  <section class="section services" id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Interior & Exterior House Painting</li>
+      <li>Drywall and Stucco Repairs</li>
+      <li>Epoxy Floors and Countertops</li>
+      <li>Baseboard Installation</li>
+      <li>Popcorn Ceiling Removal</li>
+      <li>Power Washing</li>
+      <li>Custom Curb Numbers</li>
+      <li>Free Estimates & Consultations</li>
+    </ul>
+  </section>
+
+  <section class="section contact" id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <a href="tel:6025267364">Call or Text: (602) 526-7364</a>
+      <a href="mailto:azreynoldspaintingllc@gmail.com">Email: azreynoldspaintingllc@gmail.com</a>
+      <a href="https://www.facebook.com/ReynoldsPaintingandResurfacingLLC" target="_blank">Facebook: @ReynoldsPaintingandResurfacingLLC</a>
     </div>
-  </div>
+  </section>
+
   <footer>
-    <p>&copy; 2025 Reynolds Painting & Resurfacing LLC. All rights reserved.</p>
-  </footer>
-</body>
-  </html><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reynolds Painting & Resurfacing LLC</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
-    header, footer {
-      background-color: #003366;
-      color: white;
-      padding: 1em 2em;
-      text-align: center;
-    }
-    .container {
-      padding: 2em;
-      max-width: 900px;
-      margin: auto;
-    }
-    h1, h2, h3 {
-      color: #003366;
-    }
-    ul {
-      list-style-type: square;
-      padding-left: 1.2em;
-    }
-    a {
-      color: #003366;
-      text-decoration: none;
-    }
-    .highlight {
-      text-align: center;
-      margin-top: 2em;
-      font-weight: bold;
-      font-size: 1.2em;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Reynolds Painting & Resurfacing LLC</h1>
-    <p>I'll paint your house as I would my own — there's no shortcuts.</p>
-  </header>
-  <div class="container">
-    <section>
-      <h2>About Us</h2>
-      <p>
-        At Reynolds Painting & Resurfacing LLC, we provide trusted, professional painting services across the Valley Wide Area. We handle both residential and commercial properties and offer free estimates and over-the-phone consultations at your convenience.
-      </p>
-    </section>
-    <section>
-      <h2>Services</h2>
-      <ul>
-        <li>Interior & exterior painting</li>
-        <li>Drywall repair & patching</li>
-        <li>Cabinet & surface refinishing</li>
-        <li>Commercial/residential repainting</li>
-        <li>Custom color matching</li>
-        <li>Pressure washing prep</li>
-        <li>Discounts available — lower prices than other licensed LLCs</li>
-      </ul>
-    </section>
-    <section>
-      <h2>Why Choose Us?</h2>
-      <ul>
-        <li>Licensed & reliable</li>
-        <li>Affordable pricing</li>
-        <li>Clean, efficient work</li>
-        <li>Fast scheduling</li>
-        <li>Locally owned & operated</li>
-      </ul>
-    </section>
-    <section>
-      <h2>Contact Us</h2>
-      <p><strong>Phone:</strong> <a href="tel:6025267364">602-526-7364</a></p>
-      <p><strong>Email:</strong> <a href="mailto:azreynoldspaintingllc@gmail.com">azreynoldspaintingllc@gmail.com</a></p>
-      <p><strong>Facebook:</strong> <a href="https://facebook.com/Reynolds-Painting-and-Resurfacing-LLC" target="_blank">Reynolds Painting and Resurfacing LLC</a></p>
-      <p><strong>Free estimates. Call or message anytime!</strong></p>
-    </section>
-    <div class="highlight">
-      <p>REYNOLDS PAINTING & RESURFACING LLC</p>
-      <p>(Your go-to trusted painting professionals)</p>
-      <p>Painting Perfection one surface at a time.</p>
-    </div>
-  </div>
-  <footer>
-    <p>&copy; 2025 Reynolds Painting & Resurfacing LLC. All rights reserved.</p>
+    © 2025 Reynolds Painting & Resurfacing LLC – All Rights Reserved
   </footer>
 </body>
 </html>

@@ -6,120 +6,72 @@
   <title>Reynolds Painting & Resurfacing LLC</title>
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background: #f2f2f2;
+      background: #0b3d91; /* restored blue */
+      color: white;
     }
-
-    header {
-      background: #1a1a1a;
-      color: #fff;
-      padding: 20px 0;
+    header, footer {
       text-align: center;
+      padding: 1em;
+      background: #092c6c;
     }
-
-    header h1 {
-      margin: 0;
-      font-size: 2em;
+    h1, h2, h3 {
+      margin: 0.5em 0;
     }
-
-    header p {
-      font-style: italic;
-      font-size: 1.1em;
-    }
-
     .section {
-      padding: 40px 20px;
-      text-align: center;
+      padding: 2em;
+      max-width: 900px;
+      margin: auto;
     }
-
-    .services {
-      background: #fff;
+    .services, .contact, .testimonials {
+      background: #113f99;
+      border-radius: 10px;
+      margin-bottom: 2em;
+      padding: 1.5em;
     }
-
-    .services h2, .testimonials h2 {
-      margin-bottom: 20px;
-    }
-
-    .services ul {
+    ul {
       list-style: none;
-      padding: 0;
+      padding-left: 0;
     }
-
-    .services li {
-      margin: 10px 0;
-      font-size: 1.1em;
-    }
-
-    .testimonials {
-      background: #f8f8f8;
-    }
-
-    .testimonial-slider {
-      position: relative;
-      max-width: 800px;
-      margin: 0 auto;
-      min-height: 180px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-
-    .testimonial {
-      display: none;
-      padding: 1rem;
-      max-width: 600px;
-      transition: opacity 0.5s ease-in-out;
-    }
-
-    .testimonial.active {
-      display: block;
-    }
-
-    .testimonial h4 {
-      margin-top: 10px;
-      font-weight: normal;
-      font-style: italic;
-    }
-
-    .contact {
-      background: #fff;
-    }
-
-    form {
-      max-width: 500px;
-      margin: 0 auto;
-      text-align: left;
-    }
-
-    form input, form textarea {
+    .contact-form input, .contact-form textarea {
       width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-    }
-
-    form button {
-      background: #1a1a1a;
-      color: #fff;
-      padding: 10px 20px;
+      margin: 0.5em 0;
+      padding: 0.8em;
       border: none;
+      border-radius: 5px;
+    }
+    .contact-form button {
+      background: #ffa500;
+      color: black;
+      border: none;
+      padding: 0.8em 1.5em;
+      border-radius: 5px;
       cursor: pointer;
     }
-
-    footer {
-      background: #1a1a1a;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
+    .testimonial-slider {
+      position: relative;
+      height: 160px; /* fixed height to avoid layout shifting */
+      overflow: hidden;
     }
-
-    footer a {
+    .testimonial {
+      position: absolute;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      width: 100%;
+      text-align: center;
+    }
+    .testimonial.active {
+      opacity: 1;
+      position: relative;
+    }
+    footer p {
+      margin: 0.3em 0;
+    }
+    .footer-links a {
       color: #fff;
-      text-decoration: underline;
+      margin: 0 0.5em;
+      text-decoration: none;
     }
   </style>
 </head>
@@ -127,64 +79,50 @@
 
   <header>
     <h1>Reynolds Painting & Resurfacing LLC</h1>
-    <p>"Painting Perfection one surface at a time."</p>
-    <p>Locally owned & trusted — Serving the Valley Wide Area</p>
+    <p><em>"Painting Perfection One Surface at a Time"</em></p>
   </header>
 
-  <section class="section services">
+  <div class="section services">
     <h2>Our Services</h2>
     <ul>
-      <li>Interior & Exterior Painting (Residential & Commercial)</li>
+      <li>Interior & Exterior Painting</li>
+      <li>Cabinet Refinishing</li>
       <li>Countertop Resurfacing</li>
       <li>Bathtub & Shower Resurfacing</li>
-      <li>Garage Floor Coatings</li>
+      <li>Garage Floor Epoxy Coatings</li>
       <li>Pool Deck Coatings</li>
-      <li>Cabinet Painting & Refinishing</li>
-      <li>Wall & Ceiling Repair / Texturing</li>
-      <li>Color Matching & Custom Tinting</li>
-      <li>Pressure Washing</li>
-      <li>Free Estimates & On-call Consultations</li>
-      <li>Discounts Available — Better Prices Than the Competition!</li>
+      <li>Drywall Repair & Texture</li>
+      <li>Staining & Varnishing</li>
     </ul>
-  </section>
+  </div>
 
-  <section class="section testimonials" id="testimonials">
+  <div class="section testimonials">
     <h2>What Our Customers Say</h2>
     <div class="testimonial-slider">
-      <div class="testimonial active">
-        <p>“Reynolds Painting & Resurfacing transformed our kitchen counters. Affordable and beautiful!”</p>
-        <h4>- Maria G.</h4>
-      </div>
-      <div class="testimonial">
-        <p>“Fast, professional, and high-quality. Our garage floor looks brand new.”</p>
-        <h4>- James R.</h4>
-      </div>
-      <div class="testimonial">
-        <p>“We hired them for pool deck resurfacing — we couldn't be happier with the results. Five stars!”</p>
-        <h4>- Lisa M.</h4>
-      </div>
-      <div class="testimonial">
-        <p>“Top-tier tinting and resurfacing services. These guys don’t cut corners!”</p>
-        <h4>- David H.</h4>
-      </div>
+      <div class="testimonial active">"Absolutely top-tier work! My kitchen cabinets look brand new." - Sarah M.</div>
+      <div class="testimonial">"These guys turned our old tub into something out of a magazine!" - Josh D.</div>
+      <div class="testimonial">"Highly professional and affordable. 10/10 recommend." - Maria L.</div>
+      <div class="testimonial">"They resurfaced our garage floor and it looks amazing!" - Kevin T.</div>
+      <div class="testimonial">"Prompt, professional, and passionate about their craft!" - Alicia R.</div>
     </div>
-  </section>
+  </div>
 
-  <section class="section contact" id="contact">
+  <div class="section contact">
     <h2>Contact Us</h2>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
+    <form class="contact-form" action="https://formsubmit.co/azreynoldspaintingllc@gmail.com" method="POST">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
     </form>
-  </section>
+  </div>
 
   <footer>
-    <p>Call/Text: <a href="tel:6025267364">602-526-7364</a></p>
-    <p>Email: <a href="mailto:azreynoldspaintingllc@gmail.com">azreynoldspaintingllc@gmail.com</a></p>
-    <p>Facebook: <a href="https://facebook.com/azreynoldspaintingllc" target="_blank">azreynoldspaintingllc</a></p>
     <p>&copy; 2025 Reynolds Painting & Resurfacing LLC</p>
+    <p>Phone: 602-526-7364 | Email: azreynoldspaintingllc@gmail.com</p>
+    <div class="footer-links">
+      <a href="https://facebook.com/azreynoldspaintingllc" target="_blank">Facebook</a>
+    </div>
   </footer>
 
   <script>
@@ -195,7 +133,7 @@
       testimonials[index].classList.remove('active');
       index = (index + 1) % testimonials.length;
       testimonials[index].classList.add('active');
-    }, 5000);
+    }, 4000);
   </script>
 
 </body>

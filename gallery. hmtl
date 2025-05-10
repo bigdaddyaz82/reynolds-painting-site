@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Reynolds Painting & Resurfacing</title>
+  <!-- Lightbox2 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet">
+  <style>
+    /* Gallery Layout */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .gallery a {
+      width: calc(33.33% - 10px);
+    }
+
+    .gallery img.thumbnail {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.2s;
+    }
+
+    .gallery img.thumbnail:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <!-- Your main navigation (optional) -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <!-- Add other navigation items here -->
+    </ul>
+  </nav>
+
+  <!-- Gallery Section -->
+  <h1>Our Work - Gallery</h1>
+  <div class="gallery">
+    <!-- Replace with your actual images and links -->
+    <a href="path-to-your-large-image1.jpg" data-lightbox="my-gallery" data-title="Image 1 Description">
+      <img src="path-to-your-thumbnail-image1.jpg" alt="Image 1" class="thumbnail">
+    </a>
+    <a href="path-to-your-large-image2.jpg" data-lightbox="my-gallery" data-title="Image 2 Description">
+      <img src="path-to-your-thumbnail-image2.jpg" alt="Image 2" class="thumbnail">
+    </a>
+    <a href="path-to-your-large-image3.jpg" data-lightbox="my-gallery" data-title="Image 3 Description">
+      <img src="path-to-your-thumbnail-image3.jpg" alt="Image 3" class="thumbnail">
+    </a>
+    <!-- Add more images as needed -->
+  </div>
+
+  <!-- Lightbox2 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
+</body>
+</html>

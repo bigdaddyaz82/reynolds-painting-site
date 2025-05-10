@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Reynolds Painting & Resurfacing LLC – Expert painting and resurfacing services including countertops, bathtubs, garage floors, and pools. Free estimates. Quality guaranteed."/>
+  <meta name="description" content="Reynolds Painting & Resurfacing LLC – Professional painting services Valley Wide. Free estimates. Quality guaranteed."/>
   <title>Reynolds Painting & Resurfacing LLC</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -17,23 +16,17 @@
     header {
       background: #1e4d7d;
       color: white;
-      padding: 1.5rem 2rem;
+      padding: 1rem 2rem;
       text-align: center;
     }
     header h1 {
       margin: 0;
-      font-size: 2.2rem;
+      font-size: 2rem;
     }
     .tagline {
       font-size: 1rem;
       margin-top: 0.5rem;
       font-style: italic;
-    }
-    .motto {
-      font-weight: bold;
-      font-style: italic;
-      margin-top: 0.3rem;
-      font-size: 1.1rem;
     }
     nav {
       background: #357ab7;
@@ -53,7 +46,7 @@
       max-width: 900px;
       margin: auto;
     }
-    .services, .contact {
+    .services, .contact, .testimonials {
       background: white;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -69,13 +62,8 @@
     .contact-info a {
       color: #1e4d7d;
       text-decoration: none;
-      display: flex;
-      align-items: center;
+      display: block;
       margin: 0.5rem 0;
-      font-size: 1rem;
-    }
-    .contact-info a i {
-      margin-right: 0.5rem;
     }
     footer {
       text-align: center;
@@ -83,48 +71,89 @@
       font-size: 0.9rem;
       color: #777;
     }
+    .social-links a {
+      color: #1e4d7d;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+    .testimonials blockquote {
+      font-style: italic;
+      color: #555;
+      border-left: 4px solid #1e4d7d;
+      padding-left: 1rem;
+      margin: 1rem 0;
+    }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Reynolds Painting & Resurfacing LLC</h1>
-    <p class="tagline">Painting & Resurfacing — Kitchens, Bathrooms, Garage Floors, Pools & More</p>
-    <p class="motto">Painting perfection one surface at a time.</p>
+    <p class="tagline">Painting Perfection, One Surface at a Time</p>
   </header>
 
   <nav>
     <a href="#services">Services</a>
+    <a href="#testimonials">Testimonials</a>
     <a href="#contact">Contact</a>
+    <a href="https://www.facebook.com/azreynoldspaintingllc" target="_blank">Facebook</a>
   </nav>
 
-  <div class="section">
-    <div id="services" class="services">
-      <h2>Our Services</h2>
+  <div class="section" id="services">
+    <h2>Our Services</h2>
+    <div class="services">
       <ul>
-        <li>Interior & Exterior Painting (Commercial & Residential)</li>
+        <li>Interior & Exterior Painting</li>
         <li>Countertop Resurfacing</li>
-        <li>Bathtub & Shower Resurfacing</li>
+        <li>Bathtub Resurfacing</li>
         <li>Garage Floor Coatings</li>
-        <li>Pool Deck Coating</li>
-        <li>Stucco & Drywall Repair</li>
-        <li>Cabinet Painting</li>
-        <li>Custom Color Matching</li>
+        <li>Pool Deck Resurfacing</li>
+        <li>Custom Tinting & Color Matching</li>
       </ul>
     </div>
+  </div>
 
-    <div id="contact" class="contact">
-      <h2>Contact Us</h2>
-      <div class="contact-info">
-        <a href="tel:6025267364"><i class="fas fa-phone"></i> (602) 526-7364</a>
-        <a href="mailto:azreynoldspaintingllc@gmail.com"><i class="fas fa-envelope"></i> azreynoldspaintingllc@gmail.com</a>
-        <a href="https://www.facebook.com/azreynoldspaintingllc" target="_blank"><i class="fab fa-facebook"></i> Facebook Page</a>
-      </div>
-      <p>Locally owned and operated. Serving the entire Valley. Free estimates and consultations at your convenience. Discounts available.</p>
+  <div class="section" id="testimonials">
+    <h2>What Our Clients Are Saying</h2>
+    <div class="testimonials">
+      <blockquote>
+        "Reynolds Painting & Resurfacing did an amazing job on our home! The crew was professional, quick, and the results were perfect."
+        <footer>- Sarah J.</footer>
+      </blockquote>
+      <blockquote>
+        "Our garage floor looks brand new thanks to Reynolds Painting. We highly recommend their services!"
+        <footer>- Mike T.</footer>
+      </blockquote>
+    </div>
+  </div>
+
+  <div class="section" id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact">
+      <form action="https://formsubmit.co/azreynoldspaintingllc@gmail.com" method="POST">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required>
+        
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        
+        <button type="submit">Submit</button>
+      </form>
     </div>
   </div>
 
   <footer>
-    &copy; 2025 Reynolds Painting & Resurfacing LLC. All rights reserved.
+    <p>© 2025 Reynolds Painting & Resurfacing LLC | <a href="mailto:azreynoldspaintingllc@gmail.com">Email Us</a></p>
+    <div class="social-links">
+      <a href="https://www.facebook.com/azreynoldspaintingllc" target="_blank">Facebook</a>
+    </div>
   </footer>
+
 </body>
 </html>

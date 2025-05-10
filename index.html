@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #0b3d91; /* restored blue */
+      background: #0b3d91; /* blue background */
       color: white;
     }
     header, footer {
@@ -19,8 +19,9 @@
     h1, h2, h3 {
       margin: 0.5em 0;
     }
-    .red-title {
+    h1, h2 {
       color: red;
+      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
     }
     .section {
       padding: 2em;
@@ -54,7 +55,7 @@
     }
     .testimonial-slider {
       position: relative;
-      height: 160px; /* fixed height to avoid layout shifting */
+      height: 160px;
       overflow: hidden;
     }
     .testimonial {
@@ -81,12 +82,12 @@
 <body>
 
   <header>
-    <h1 class="red-title">Reynolds Painting & Resurfacing LLC</h1>
+    <h1>Reynolds Painting & Resurfacing LLC</h1>
     <p><em>"Painting Perfection One Surface at a Time"</em></p>
   </header>
 
   <div class="section services">
-    <h2 class="red-title">Our Services</h2>
+    <h2>Our Services</h2>
     <ul>
       <li>Interior & Exterior Painting</li>
       <li>Cabinet Refinishing</li>
@@ -99,9 +100,8 @@
     </ul>
   </div>
 
-  <!-- About Us Section -->
-  <section class="about">
-    <h2 class="red-title">About Reynolds Painting & Resurfacing LLC</h2>
+  <div class="section about">
+    <h2>About Reynolds Painting & Resurfacing LLC</h2>
     <p>
       At Reynolds Painting & Resurfacing, we're passionate about delivering high-quality painting and resurfacing services to homes and businesses throughout the Valley. While the company was officially established recently, I've been painting professionally here in the Valley since 2016. 
       As the owner and main painter, I personally take pride in every project, ensuring the best possible service for my clients. I treat every job as if it were my own home—focused on quality, precision, and care.
@@ -109,10 +109,10 @@
     <p>
       From residential to commercial properties, no job is too big or too small. My goal is simple: to provide professional, trustworthy service that you can rely on—delivered on time and within budget.
     </p>
-  </section>
+  </div>
 
   <div class="section testimonials">
-    <h2 class="red-title">What Our Customers Say</h2>
+    <h2>What Our Customers Say</h2>
     <div class="testimonial-slider">
       <div class="testimonial active">"Absolutely top-tier work! My kitchen cabinets look brand new." - Sarah M.</div>
       <div class="testimonial">"These guys turned our old tub into something out of a magazine!" - Josh D.</div>
@@ -123,7 +123,7 @@
   </div>
 
   <div class="section contact">
-    <h2 class="red-title">Contact Us</h2>
+    <h2>Contact Us</h2>
     <form class="contact-form" action="https://formsubmit.co/azreynoldspaintingllc@gmail.com" method="POST">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
@@ -135,6 +135,7 @@
   <footer>
     <p>&copy; 2025 Reynolds Painting & Resurfacing LLC</p>
     <p>Phone: 602-526-7364 | Email: azreynoldspaintingllc@gmail.com</p>
+    <p>Facebook: AZ Reynolds Painting LLC</p>
     <div class="footer-links">
       <a href="https://facebook.com/azreynoldspaintingllc" target="_blank">Facebook</a>
     </div>
@@ -143,7 +144,6 @@
   <script>
     const testimonials = document.querySelectorAll('.testimonial');
     let index = 0;
-
     setInterval(() => {
       testimonials[index].classList.remove('active');
       index = (index + 1) % testimonials.length;

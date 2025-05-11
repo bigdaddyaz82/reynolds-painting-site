@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #0b3d91; /* blue background */
+      background: #0b3d91;
       color: white;
     }
     header, footer {
@@ -59,13 +59,15 @@
       overflow: hidden;
     }
     .testimonial {
+      display: none;
       position: absolute;
-      opacity: 0;
-      transition: opacity 0.5s ease-in-out;
       width: 100%;
       text-align: center;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
     }
     .testimonial.active {
+      display: block;
       opacity: 1;
       position: relative;
     }
@@ -103,13 +105,10 @@
   <div class="section about">
     <h2>About Reynolds Painting & Resurfacing LLC</h2>
     <p>
-      At Reynolds Painting & Resurfacing, we take pride in delivering high-quality, professional painting and resurfacing services to homeowners and businesses across the Valley. Our company was founded with the goal of providing reliable, affordable, and top-tier service to our community.
+      Reynolds Painting & Resurfacing LLC is a locally owned and operated painting company proudly serving the Valley Wide Area. We specialize in delivering high-quality painting and resurfacing solutions for residential and commercial properties.
     </p>
     <p>
-      As the owner and lead painter, I, personally, ensure that every job is completed with the utmost care and attention to detail. Since 2016, I have been serving the Valley, perfecting my craft, and delivering results that our clients rave about.
-    </p>
-    <p>
-      Whether you're looking for residential or commercial painting, cabinet refinishing, or surface repairs, Reynolds Painting & Resurfacing is your trusted partner. We offer exceptional work, on-time completion, and a commitment to your satisfaction, every time.
+      Whether you're updating a single room or renovating an entire property, we bring trusted professionalism to every project. We offer free estimates, flexible phone consultations, and we guarantee to beat most LLC competitors in price—without cutting corners. Our motto is simple: "I'll paint your house as I would my own, there's no shortcuts."
     </p>
   </div>
 
@@ -127,16 +126,4 @@
   <div class="section contact">
     <h2>Contact Us</h2>
     <form class="contact-form" action="https://formsubmit.co/azreynoldspaintingllc@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 Reynolds Painting & Resurfacing LLC</p>
-    <p>Phone: 602-526-7364 | Email: azreynoldspaintingllc@gmail.com</p>
-    <p>Facebook: AZ Reynolds Painting LLC</p>
-    <div class="footer-links">
-      <a href
+      <input type="text" name="name"

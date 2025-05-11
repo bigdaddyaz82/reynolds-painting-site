@@ -6,76 +6,41 @@
   <title>Reynolds Painting & Resurfacing LLC</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background: #0b3d91; /* blue background */
-      color: white;
+      margin: 0;
+      background: #fff;
+      color: #333;
     }
-    header, footer {
+    header {
+      background: #8B0000;
+      color: #fff;
+      padding: 20px 10px;
       text-align: center;
-      padding: 1em;
-      background: #092c6c;
-    }
-    h1, h2, h3 {
-      margin: 0.5em 0;
-    }
-    h1, h2 {
-      color: red;
-      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+      text-shadow: 1px 1px 2px black;
     }
     .section {
-      padding: 2em;
+      padding: 20px;
       max-width: 900px;
       margin: auto;
     }
-    .services, .contact, .testimonials {
-      background: #113f99;
-      border-radius: 10px;
-      margin-bottom: 2em;
-      padding: 1.5em;
+    .about h2, .services h2, .contact h2 {
+      color: #8B0000;
+      text-shadow: 1px 1px 1px #aaa;
     }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    .contact-form input, .contact-form textarea {
-      width: 100%;
-      margin: 0.5em 0;
-      padding: 0.8em;
-      border: none;
-      border-radius: 5px;
-    }
-    .contact-form button {
-      background: #ffa500;
-      color: black;
-      border: none;
-      padding: 0.8em 1.5em;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .testimonial-slider {
-      position: relative;
-      height: 160px;
-      overflow: hidden;
-    }
-    .testimonial {
-      position: absolute;
-      opacity: 0;
-      transition: opacity 0.5s ease-in-out;
-      width: 100%;
-      text-align: center;
-    }
-    .testimonial.active {
-      opacity: 1;
-      position: relative;
-    }
-    footer p {
-      margin: 0.3em 0;
-    }
-    .footer-links a {
+    footer {
+      background: #8B0000;
       color: #fff;
-      margin: 0 0.5em;
-      text-decoration: none;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      text-shadow: 1px 1px 1px black;
+    }
+    a {
+      color: #fff;
+      text-decoration: underline;
+    }
+    .contact p {
+      margin: 5px 0;
     }
   </style>
 </head>
@@ -83,73 +48,49 @@
 
   <header>
     <h1>Reynolds Painting & Resurfacing LLC</h1>
-    <p><em>"Painting Perfection One Surface at a Time"</em></p>
+    <p>Painting Perfection One Surface at a Time</p>
   </header>
-
-  <div class="section services">
-    <h2>Our Services</h2>
-    <ul>
-      <li>Interior & Exterior Painting</li>
-      <li>Cabinet Refinishing</li>
-      <li>Countertop Resurfacing</li>
-      <li>Bathtub & Shower Resurfacing</li>
-      <li>Garage Floor Epoxy Coatings</li>
-      <li>Pool Deck Coatings</li>
-      <li>Drywall Repair & Texture</li>
-      <li>Staining & Varnishing</li>
-    </ul>
-  </div>
 
   <div class="section about">
     <h2>About Reynolds Painting & Resurfacing LLC</h2>
     <p>
-      At Reynolds Painting & Resurfacing, we're passionate about delivering high-quality painting and resurfacing services to homes and businesses throughout the Valley. While the company was officially established recently, I've been painting professionally here in the Valley since 2016. 
-      As the owner and main painter, I personally take pride in every project, ensuring the best possible service for my clients. I treat every job as if it were my own home—focused on quality, precision, and care.
+      At Reynolds Painting & Resurfacing LLC, our mission is to deliver professional, high-quality painting and resurfacing services that enhance the beauty and value of your property. We are a locally owned and operated business that understands the needs of homeowners and business owners throughout the Valley.
     </p>
     <p>
-      From residential to commercial properties, no job is too big or too small. My goal is simple: to provide professional, trustworthy service that you can rely on—delivered on time and within budget.
+      My name is Shaun Reynolds, and I’ve been painting professionally in Arizona since 2016. When I started this company, it was built on one simple principle: I treat every project as if it were my own. That means doing the job right and never cutting corners.
+    </p>
+    <p>
+      Whether it’s a single room, an entire home, or a commercial property, we bring precision, professionalism, and pride to every job. From detailed interior painting to tough, lasting garage floor epoxy, we have the experience to get it done right the first time.
+    </p>
+    <p>
+      When you hire Reynolds Painting & Resurfacing, you're not just getting another contractor — you're getting someone who truly cares about the final result. Let’s make your vision a reality.
     </p>
   </div>
 
-  <div class="section testimonials">
-    <h2>What Our Customers Say</h2>
-    <div class="testimonial-slider">
-      <div class="testimonial active">"Absolutely top-tier work! My kitchen cabinets look brand new." - Sarah M.</div>
-      <div class="testimonial">"These guys turned our old tub into something out of a magazine!" - Josh D.</div>
-      <div class="testimonial">"Highly professional and affordable. 10/10 recommend." - Maria L.</div>
-      <div class="testimonial">"They resurfaced our garage floor and it looks amazing!" - Kevin T.</div>
-      <div class="testimonial">"Prompt, professional, and passionate about their craft!" - Alicia R.</div>
-    </div>
+  <div class="section services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Residential & Commercial Painting</li>
+      <li>Interior & Exterior Painting</li>
+      <li>Garage Floor Epoxy</li>
+      <li>Cabinet Refinishing</li>
+      <li>Surface Preparation & Resurfacing</li>
+      <li>Free Estimates & Consultations</li>
+    </ul>
   </div>
 
   <div class="section contact">
     <h2>Contact Us</h2>
-    <form class="contact-form" action="https://formsubmit.co/azreynoldspaintingllc@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+    <p>Phone: <a href="tel:6025267364">602-526-7364</a></p>
+    <p>Email: <a href="mailto:azreynoldspaintingllc@gmail.com">azreynoldspaintingllc@gmail.com</a></p>
+    <p>Facebook: <a href="https://facebook.com/azreynoldspaintingllc" target="_blank">AZ Reynolds Painting LLC</a></p>
+    <p>Servicing: Valley Wide Area, Arizona</p>
+    <p><strong>Locally Owned. Licensed & Insured.</strong></p>
   </div>
 
   <footer>
-    <p>&copy; 2025 Reynolds Painting & Resurfacing LLC</p>
-    <p>Phone: 602-526-7364 | Email: azreynoldspaintingllc@gmail.com</p>
-    <p>Facebook: AZ Reynolds Painting LLC</p>
-    <div class="footer-links">
-      <a href="https://facebook.com/azreynoldspaintingllc" target="_blank">Facebook</a>
-    </div>
+    &copy; 2025 Reynolds Painting & Resurfacing LLC — "I'll paint your house as I would my own. There's no shortcuts."
   </footer>
-
-  <script>
-    const testimonials = document.querySelectorAll('.testimonial');
-    let index = 0;
-    setInterval(() => {
-      testimonials[index].classList.remove('active');
-      index = (index + 1) % testimonials.length;
-      testimonials[index].classList.add('active');
-    }, 4000);
-  </script>
 
 </body>
 </html>

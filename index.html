@@ -6,133 +6,190 @@
   <title>Reynolds Painting & Resurfacing LLC</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f5f5f5;
-      color: #333;
-    }
-    header {
-      background-color: #14213d;
+      font-family: Arial, sans-serif;
+      background: #0b3d91;
       color: white;
-      padding: 20px;
+    }
+    header, footer {
+      text-align: center;
+      padding: 1em;
+      background: #092c6c;
+    }
+    h1, h2, h3 {
+      margin: 0.5em 0;
+      text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
+    }
+    .red-title {
+      color: red;
+    }
+    .section {
+      padding: 2em;
+      max-width: 900px;
+      margin: auto;
+    }
+    .services, .contact, .testimonials {
+      background: #113f99;
+      border-radius: 10px;
+      margin-bottom: 2em;
+      padding: 1.5em;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      margin: 0.5em 0;
+      padding: 0.8em;
+      border: none;
+      border-radius: 5px;
+    }
+    .contact-form button {
+      background: #ffa500;
+      color: black;
+      border: none;
+      padding: 0.8em 1.5em;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .testimonial-slider {
+      position: relative;
+      height: 160px;
+      overflow: hidden;
+    }
+    .testimonial {
+      position: absolute;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      width: 100%;
       text-align: center;
     }
-    section {
-      padding: 20px;
-      background: white;
-      margin: 10px;
-      border-radius: 8px;
+    .testimonial.active {
+      opacity: 1;
+      position: relative;
     }
-    h2 {
-      color: #14213d;
+    footer p {
+      margin: 0.3em 0;
     }
-    .footer {
-      background-color: #14213d;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      margin-top: 20px;
-    }
-    .footer a {
-      color: #fca311;
+    .footer-links a {
+      color: #fff;
+      margin: 0 0.5em;
       text-decoration: none;
     }
-    .gallery img {
-      width: 100%;
-      max-width: 300px;
-      margin: 10px;
-      border-radius: 10px;
-    }
-    .review-slider {
-      display: flex;
-      overflow-x: auto;
-      gap: 20px;
-      padding: 10px;
-    }
-    .review {
-      min-width: 250px;
-      background-color: #fca311;
-      padding: 15px;
-      border-radius: 10px;
+    .barter-message {
+      text-align: center;
+      padding: 2rem;
+      background-color: #113f99;
       color: white;
-    }
-    .services li {
-      margin: 8px 0;
+      font-size: 1.1rem;
+      border-radius: 10px;
+      margin: 2em auto;
+      max-width: 900px;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Reynolds Painting & Resurfacing LLC</h1>
-  <p>Painting Perfection One Surface at a Time</p>
-</header>
+  <header>
+    <h1 class="red-title">Reynolds Painting & Resurfacing LLC</h1>
+    <p><em>"Painting Perfection One Surface at a Time"</em></p>
+  </header>
 
-<section>
-  <h2>More About Us</h2>
-  <p>We are a locally owned, trusted, and professional painting company serving the Valley Wide Area. We specialize in both commercial and residential work. We provide free estimates and phone consultations at your convenience. “I'll paint your house as I would my own — there are no shortcuts.”</p>
-</section>
-
-<section>
-  <h2>Why You Should Paint Your House</h2>
-  <p>Painting your house protects your investment, boosts curb appeal, and increases its market value. A professional paint job seals out moisture and prevents expensive damage. Plus, it makes your home feel like new.</p>
-</section>
-
-<section>
-  <h2>Why You Should Resurface Your Tubs</h2>
-  <p>Resurfacing saves money versus replacing. It extends the life of your tub, updates the look, and improves cleanliness. We use high-quality materials to give your surfaces a like-new finish.</p>
-</section>
-
-<section>
-  <h2>Our Services</h2>
-  <ul class="services">
-    <li>Interior and Exterior Painting</li>
-    <li>Bathtub and Countertop Resurfacing</li>
-    <li>Stucco and Drywall Repair</li>
-    <li>Cabinet Refinishing</li>
-    <li>Epoxy Garage Floors</li>
-    <li>Commercial & Residential Projects</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Customer Reviews</h2>
-  <div class="review-slider">
-    <div class="review">"Incredible job on my kitchen! Looks brand new." – Sarah M.</div>
-    <div class="review">"Fair prices and amazing work ethic. Highly recommend!" – John R.</div>
-    <div class="review">"My tub looks like it was just installed. Thanks!" – Angela P.</div>
-    <div class="review">"Painted our whole exterior perfectly. Professional team." – Marcos G.</div>
-    <div class="review">"I’ll never use anyone else again. Respectful and fast!" – Brenda T.</div>
+  <div class="section services">
+    <h2 class="red-title">Our Services</h2>
+    <ul>
+      <li>Interior & Exterior Painting</li>
+      <li>Cabinet Refinishing</li>
+      <li>Countertop Resurfacing</li>
+      <li>Bathtub & Shower Resurfacing</li>
+      <li>Garage Floor Epoxy Coatings</li>
+      <li>Pool Deck Coatings</li>
+      <li>Drywall Repair & Texture</li>
+      <li>Staining & Varnishing</li>
+    </ul>
   </div>
-</section>
 
-<section>
-  <h2>Gallery</h2>
-  <div class="gallery">
-    <img src="https://via.placeholder.com/300x200?text=House+1" alt="Painted house 1" />
-    <img src="https://via.placeholder.com/300x200?text=Bathtub+Before+%26+After" alt="Resurfaced bathtub" />
-    <img src="https://via.placeholder.com/300x200?text=Cabinets+Restored" alt="Restored cabinets" />
+  <section class="about section">
+    <h2 class="red-title">About Reynolds Painting & Resurfacing LLC</h2>
+    <p>
+      At Reynolds Painting & Resurfacing, we're passionate about delivering high-quality painting and resurfacing services to homes and businesses throughout the Valley. While the company was officially established recently, I've been painting professionally here in the Valley since 2016. 
+      As the owner and main painter, I personally take pride in every project, ensuring the best possible service for my clients. I treat every job as if it were my own home—focused on quality, precision, and care.
+    </p>
+    <p>
+      From residential to commercial properties, no job is too big or too small. My goal is simple: to provide professional, trustworthy service that you can rely on—delivered on time and within budget.
+    </p>
+  </section>
+
+  <section class="about section">
+    <h2 class="red-title">More About Us</h2>
+    <p>
+      Reynolds Painting & Resurfacing LLC is locally owned and operated. I offer free estimates and flexible consultation times — whether it’s over the phone or in person — to meet you where you're comfortable. I’ve been proudly serving the Valley since 2016 and continue to grow through word of mouth, trust, and honest work.
+    </p>
+    <p>
+      I’ll paint your house like I would my own — no shortcuts, no excuses. Whether you're a homeowner, a property manager, or a business owner, you’ll get the same dedication and respect from start to finish. We beat other licensed LLCs on both <strong>price and quality</strong>.
+    </p>
+  </section>
+
+  <div class="section gallery">
+    <h2 class="red-title">Project Gallery</h2>
+    <p>Here are some examples of our recent work. More coming soon!</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1em;">
+      <img src="https://via.placeholder.com/300x200?text=Project+1" alt="Project 1" style="width:100%; border-radius:10px;">
+      <img src="https://via.placeholder.com/300x200?text=Project+2" alt="Project 2" style="width:100%; border-radius:10px;">
+      <img src="https://via.placeholder.com/300x200?text=Project+3" alt="Project 3" style="width:100%; border-radius:10px;">
+      <img src="https://via.placeholder.com/300x200?text=Project+4" alt="Project 4" style="width:100%; border-radius:10px;">
+    </div>
   </div>
-</section>
 
-<section>
-  <h2>Contact Us</h2>
-  <p>Phone: <a href="tel:6025267364">602-526-7364</a></p>
-  <p>Email: <a href="mailto:azreynoldspaintingllc@gmail.com">azreynoldspaintingllc@gmail.com</a></p>
-  <p>Facebook: <a href="https://www.facebook.com/ReynoldsPaintingandResurfacingLLC" target="_blank">Reynolds Painting and Resurfacing LLC</a></p>
-</section>
+  <div class="section testimonials">
+    <h2 class="red-title">What Our Customers Say</h2>
+    <div class="testimonial-slider">
+      <div class="testimonial active">"Absolutely top-tier work! My kitchen cabinets look brand new." - Sarah M.</div>
+      <div class="testimonial">"These guys turned our old tub into something out of a magazine!" - Josh D.</div>
+      <div class="testimonial">"Highly professional and affordable. 10/10 recommend." - Maria L.</div>
+      <div class="testimonial">"They resurfaced our garage floor and it looks amazing!" - Kevin T.</div>
+      <div class="testimonial">"Prompt, professional, and passionate about their craft!" - Alicia R.</div>
+    </div>
+  </div>
 
-<section>
-  <h2>We Accept Trades!</h2>
-  <p>We believe in the barter system and are open to trades for motorcycles, land, coins, antiques, and more. Just ask — let’s make a deal that works for both of us.</p>
-</section>
+  <div class="section contact">
+    <h2 class="red-title">Contact Us</h2>
+    <form class="contact-form" action="https://formsubmit.co/azreynoldspaintingllc@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
 
-<div class="footer">
-  <p>© 2025 Reynolds Painting & Resurfacing LLC</p>
-  <p><a href="tel:6025267364">602-526-7364</a> | <a href="mailto:azreynoldspaintingllc@gmail.com">azreynoldspaintingllc@gmail.com</a></p>
-  <p><a href="https://www.facebook.com/ReynoldsPaintingandResurfacingLLC" target="_blank">Facebook Page</a></p>
-  <p>Serving the Valley Wide Area | Commercial & Residential | Trusted & Locally Owned</p>
-</div>
+  <div class="barter-message">
+    <p>
+      <strong>We also accept trades!</strong><br>
+      Got an RV, trailer, motorcycle, land, or other assets? No problem.<br>
+      We believe in the barter system. If you’ve got something of value but not the cash, give us a call.<br>
+      Let's work something out and get your home painted!
+    </p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Reynolds Painting & Resurfacing LLC</p>
+    <p>Phone: 602-526-7364 | Email: azreynoldspaintingllc@gmail.com</p>
+    <div class="footer-links">
+      <a href="https://facebook.com/AZReynoldsPaintingLLC" target="_blank">Facebook</a>
+    </div>
+  </footer>
+
+  <script>
+    const testimonials = document.querySelectorAll('.testimonial');
+    let index = 0;
+
+    setInterval(() => {
+      testimonials[index].classList.remove('active');
+      index = (index + 1) % testimonials.length;
+      testimonials[index].classList.add('active');
+    }, 4000);
+  </script>
 
 </body>
 </html>

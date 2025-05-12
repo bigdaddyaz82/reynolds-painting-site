@@ -191,18 +191,6 @@
     </ul>
   </div>
 
-  <div class="section resurfacing-benefits">
-    <h2 class="red-title">Why Resurface Your Bathtubs, Countertops, and Garage Floors?</h2>
-    <ul>
-      <li><strong>Cost-Effective:</strong> Resurfacing is much cheaper than replacement, allowing you to refresh your surfaces at a fraction of the cost.</li>
-      <li><strong>Quick Turnaround:</strong> We can resurface your bathtub, countertops, or garage floor in just a few days—no need to wait for weeks like with full replacements.</li>
-      <li><strong>Durability:</strong> Resurfacing adds a strong, lasting finish that can withstand everyday use and last for many years.</li>
-      <li><strong>Eco-Friendly:</strong> By resurfacing, you reduce waste and keep perfectly good surfaces in use, which is better for the environment.</li>
-      <li><strong>Improves Appearance:</strong> Resurfacing can completely restore worn-out or outdated surfaces, making them look as good as new.</li>
-      <li><strong>Versatile:</strong> We can resurface a variety of surfaces, from bathtubs and countertops to garage floors, offering endless possibilities for upgrades.</li>
-    </ul>
-  </div>
-
   <div class="section gallery">
     <h2 class="red-title">Project Gallery</h2>
     <p>Here are some examples of our recent work. More coming soon!</p>
@@ -238,4 +226,30 @@
   <div class="barter-message">
     <p>
       <strong>We also accept trades!</strong><br>
-      Got an RV, trailer, boat, land, motorcycle, Coins,  Antiques,  if you got anything worth value we belive in the barter system. Give me a call or email today and let's make a deal and get your house painted. 
+      Got an RV, trailer, motorcycle, land, or other assets? No problem.<br>
+      We believe in the barter system. If you’ve got something of value but not the cash, give us a call.<br>
+      Let's work something out and get your home painted!
+    </p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Reynolds Painting & Resurfacing LLC</p>
+    <p>Phone: 602-526-7364 | Email: azreynoldspaintingllc@gmail.com</p>
+    <div class="footer-links">
+      <a href="https://facebook.com/AZReynoldsPaintingLLC" target="_blank">Facebook</a>
+    </div>
+  </footer>
+
+  <script>
+    const testimonials = document.querySelectorAll('.testimonial');
+    let index = 0;
+
+    setInterval(() => {
+      testimonials[index].classList.remove('active');
+      index = (index + 1) % testimonials.length;
+      testimonials[index].classList.add('active');
+    }, 4000);
+  </script>
+
+</body>
+</html>

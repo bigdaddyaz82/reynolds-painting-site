@@ -117,6 +117,17 @@
       max-width: 900px;
     }
 
+    .footer-container {
+      padding: 2rem 0;
+      background: #092c6c;
+      text-align: center;
+      color: white;
+    }
+
+    .footer-container p {
+      margin: 0.5em;
+    }
+
     /* Responsive design */
     @media (max-width: 768px) {
       body {
@@ -169,41 +180,6 @@
     </p>
   </section>
 
-  <section class="about section">
-    <h2 class="red-title">More About Us</h2>
-    <p>
-      Reynolds Painting & Resurfacing LLC is locally owned and operated. I offer free estimates and flexible consultation times — whether it’s over the phone or in person — to meet you where you're comfortable. I’ve been proudly serving the Valley since 2016 and continue to grow through word of mouth, trust, and honest work.
-    </p>
-    <p>
-      I’ll paint your house like I would my own — no shortcuts, no excuses. Whether you're a homeowner, a property manager, or a business owner, you’ll get the same dedication and respect from start to finish. We beat other licensed LLCs on both <strong>price and quality</strong>.
-    </p>
-  </section>
-
-  <div class="section benefits">
-    <h2 class="red-title">Why Paint Your Home?</h2>
-    <ul>
-      <li><strong>Boosts Property Value:</strong> A fresh coat of paint can increase your home's market value.</li>
-      <li><strong>Enhances Curb Appeal:</strong> Make a strong first impression with a clean, updated look.</li>
-      <li><strong>Protects Surfaces:</strong> Paint shields against weather, insects, and wear over time.</li>
-      <li><strong>Improves Air Quality:</strong> Newer paints are low-VOC and healthier for indoor spaces.</li>
-      <li><strong>Personalizes Your Space:</strong> Reflect your taste with custom colors and finishes.</li>
-      <li><strong>Beautifies Your Home:</strong> Instantly transforms any room or exterior for a more polished look.</li>
-    </ul>
-  </div>
-
-  <!-- Added Section -->
-  <div class="section resurfacing">
-    <h2 class="red-title">Why Resurface Your Tub, Countertops, Garage Floor?</h2>
-    <ul>
-      <li><strong>Eco-Friendly Option:</strong> Resurfacing reduces the need for replacement, saving resources and keeping old materials out of landfills.</li>
-      <li><strong>Cost-Effective:</strong> Resurfacing is a more affordable alternative to full replacement, giving your surfaces a fresh look without the high cost.</li>
-      <li><strong>Quick & Convenient:</strong> Resurfacing is a faster process compared to installation, minimizing disruption to your daily routine.</li>
-      <li><strong>Enhances Appearance:</strong> Resurfacing can restore the original beauty of your surfaces, giving them a like-new finish that improves the overall aesthetic of your home.</li>
-      <li><strong>Durable & Long-Lasting:</strong> High-quality resurfacing materials extend the life of your surfaces, making them more resistant to damage and wear.</li>
-      <li><strong>Customized Finishes:</strong> Choose from a variety of finishes and colors to match your style and needs.</li>
-    </ul>
-  </div>
-
   <div class="section gallery">
     <h2 class="red-title">Project Gallery</h2>
     <p>Here are some examples of our recent work. More coming soon!</p>
@@ -212,17 +188,6 @@
       <img src="https://via.placeholder.com/300x200?text=Project+2" alt="Project 2" style="width:100%; border-radius:10px;">
       <img src="https://via.placeholder.com/300x200?text=Project+3" alt="Project 3" style="width:100%; border-radius:10px;">
       <img src="https://via.placeholder.com/300x200?text=Project+4" alt="Project 4" style="width:100%; border-radius:10px;">
-    </div>
-  </div>
-
-  <div class="section testimonials">
-    <h2 class="red-title">What Our Customers Say</h2>
-    <div class="testimonial-slider">
-      <div class="testimonial active">"Absolutely top-tier work! My kitchen cabinets look brand new." - Sarah M.</div>
-      <div class="testimonial">"These guys turned our old tub into something out of a magazine!" - Josh D.</div>
-      <div class="testimonial">"Highly professional and affordable. 10/10 recommend." - Maria L.</div>
-      <div class="testimonial">"They resurfaced our garage floor and it looks amazing!" - Kevin T.</div>
-      <div class="testimonial">"Prompt, professional, and passionate about their craft!" - Alicia R.</div>
     </div>
   </div>
 
@@ -239,4 +204,30 @@
   <div class="barter-message">
     <p>
       <strong>We also accept trades!</strong><br>
-      Got an RV, Trailer, Land, Coins, Antiques 
+      Got an RV, trailer, motorcycle, land, antiques, or other assets? No problem.<br>
+      We believe in the barter system. If you’ve got something of value but not the cash, give us a call.<br>
+      Let's work something out and get your home painted!
+    </p>
+  </div>
+
+  <footer class="footer-container">
+    <p>&copy; 2025 Reynolds Painting & Resurfacing LLC</p>
+    <p>Phone: <a href="tel:+16025267364">602-526-7364</a> | Email: <a href="mailto:azreynoldspaintingllc@gmail.com">azreynoldspaintingllc@gmail.com</a></p>
+    <p>
+      <a href="https://facebook.com/AZReynoldsPaintingLLC" target="_blank">Facebook</a>
+    </p>
+  </footer>
+
+  <script>
+    const testimonials = document.querySelectorAll('.testimonial');
+    let index = 0;
+
+    setInterval(() => {
+      testimonials[index].classList.remove('active');
+      index = (index + 1) % testimonials.length;
+      testimonials[index].classList.add('active');
+    }, 4000);
+  </script>
+
+</body>
+</html>

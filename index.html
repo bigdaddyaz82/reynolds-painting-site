@@ -10,34 +10,47 @@
       font-family: Arial, sans-serif;
       background: #0b3d91;
       color: white;
+      line-height: 1.6;
     }
+
     header, footer {
       text-align: center;
-      padding: 1em;
+      padding: 1.5em;
       background: #092c6c;
     }
+
     h1, h2, h3 {
       margin: 0.5em 0;
       text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
     }
+
     .red-title {
       color: red;
     }
+
     .section {
       padding: 2em;
       max-width: 900px;
       margin: auto;
     }
+
     .services, .contact, .testimonials {
       background: #113f99;
       border-radius: 10px;
       margin-bottom: 2em;
       padding: 1.5em;
+      transition: all 0.3s ease-in-out;
     }
+
+    .services:hover, .contact:hover, .testimonials:hover {
+      background: #0b3d91;
+    }
+
     ul {
       list-style: none;
       padding-left: 0;
     }
+
     .contact-form input, .contact-form textarea {
       width: 100%;
       margin: 0.5em 0;
@@ -45,6 +58,7 @@
       border: none;
       border-radius: 5px;
     }
+
     .contact-form button {
       background: #ffa500;
       color: black;
@@ -52,12 +66,19 @@
       padding: 0.8em 1.5em;
       border-radius: 5px;
       cursor: pointer;
+      transition: background 0.3s ease;
     }
+
+    .contact-form button:hover {
+      background: #e69500;
+    }
+
     .testimonial-slider {
       position: relative;
       height: 160px;
       overflow: hidden;
     }
+
     .testimonial {
       position: absolute;
       opacity: 0;
@@ -65,18 +86,26 @@
       width: 100%;
       text-align: center;
     }
+
     .testimonial.active {
       opacity: 1;
       position: relative;
     }
+
     footer p {
       margin: 0.3em 0;
     }
+
     .footer-links a {
       color: #fff;
       margin: 0 0.5em;
       text-decoration: none;
     }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
     .barter-message {
       text-align: center;
       padding: 2rem;
@@ -86,6 +115,25 @@
       border-radius: 10px;
       margin: 2em auto;
       max-width: 900px;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      body {
+        font-size: 14px;
+      }
+
+      .section {
+        padding: 1.5em;
+      }
+
+      .gallery img {
+        width: 100%;
+      }
+
+      .services, .contact, .testimonials {
+        padding: 1em;
+      }
     }
   </style>
 </head>
@@ -130,17 +178,19 @@
       I’ll paint your house like I would my own — no shortcuts, no excuses. Whether you're a homeowner, a property manager, or a business owner, you’ll get the same dedication and respect from start to finish. We beat other licensed LLCs on both <strong>price and quality</strong>.
     </p>
   </section>
-<div class="section benefits">
-  <h2 class="red-title">Why Paint Your Home?</h2>
-  <ul>
-    <li><strong>Boosts Property Value:</strong> A fresh coat of paint can increase your home's market value.</li>
-    <li><strong>Enhances Curb Appeal:</strong> Make a strong first impression with a clean, updated look.</li>
-    <li><strong>Protects Surfaces:</strong> Paint shields against weather, insects, and wear over time.</li>
-    <li><strong>Improves Air Quality:</strong> Newer paints are low-VOC and healthier for indoor spaces.</li>
-    <li><strong>Personalizes Your Space:</strong> Reflect your taste with custom colors and finishes.</li>
-    <li><strong>Beautifies Your Home:</strong> Instantly transforms any room or exterior for a more polished look.</li>
-  </ul>
-</div>
+
+  <div class="section benefits">
+    <h2 class="red-title">Why Paint Your Home?</h2>
+    <ul>
+      <li><strong>Boosts Property Value:</strong> A fresh coat of paint can increase your home's market value.</li>
+      <li><strong>Enhances Curb Appeal:</strong> Make a strong first impression with a clean, updated look.</li>
+      <li><strong>Protects Surfaces:</strong> Paint shields against weather, insects, and wear over time.</li>
+      <li><strong>Improves Air Quality:</strong> Newer paints are low-VOC and healthier for indoor spaces.</li>
+      <li><strong>Personalizes Your Space:</strong> Reflect your taste with custom colors and finishes.</li>
+      <li><strong>Beautifies Your Home:</strong> Instantly transforms any room or exterior for a more polished look.</li>
+    </ul>
+  </div>
+
   <div class="section gallery">
     <h2 class="red-title">Project Gallery</h2>
     <p>Here are some examples of our recent work. More coming soon!</p>

@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #0b3d91; /* restored blue */
+      background: #0b3d91;
       color: white;
     }
     header, footer {
@@ -18,7 +18,7 @@
     }
     h1, h2, h3 {
       margin: 0.5em 0;
-      text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7); /* white shadow on headings */
+      text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
     }
     .red-title {
       color: red;
@@ -55,7 +55,7 @@
     }
     .testimonial-slider {
       position: relative;
-      height: 160px; /* fixed height to avoid layout shifting */
+      height: 160px;
       overflow: hidden;
     }
     .testimonial {
@@ -76,6 +76,16 @@
       color: #fff;
       margin: 0 0.5em;
       text-decoration: none;
+    }
+    .barter-message {
+      text-align: center;
+      padding: 2rem;
+      background-color: #113f99;
+      color: white;
+      font-size: 1.1rem;
+      border-radius: 10px;
+      margin: 2em auto;
+      max-width: 900px;
     }
   </style>
 </head>
@@ -100,8 +110,7 @@
     </ul>
   </div>
 
-  <!-- About Us Section -->
-  <section class="about">
+  <section class="about section">
     <h2 class="red-title">About Reynolds Painting & Resurfacing LLC</h2>
     <p>
       At Reynolds Painting & Resurfacing, we're passionate about delivering high-quality painting and resurfacing services to homes and businesses throughout the Valley. While the company was officially established recently, I've been painting professionally here in the Valley since 2016. 
@@ -112,8 +121,7 @@
     </p>
   </section>
 
-  <!-- More About Us Section -->
-  <section class="about">
+  <section class="about section">
     <h2 class="red-title">More About Us</h2>
     <p>
       Reynolds Painting & Resurfacing LLC is locally owned and operated. I offer free estimates and flexible consultation times — whether it’s over the phone or in person — to meet you where you're comfortable. I’ve been proudly serving the Valley since 2016 and continue to grow through word of mouth, trust, and honest work.
@@ -122,16 +130,18 @@
       I’ll paint your house like I would my own — no shortcuts, no excuses. Whether you're a homeowner, a property manager, or a business owner, you’ll get the same dedication and respect from start to finish. We beat other licensed LLCs on both <strong>price and quality</strong>.
     </p>
   </section>
-<div class="section gallery">
-  <h2 class="red-title">Project Gallery</h2>
-  <p>Here are some examples of our recent work. More coming soon!</p>
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1em;">
-    <img src="https://via.placeholder.com/300x200?text=Project+1" alt="Project 1" style="width:100%; border-radius:10px;">
-    <img src="https://via.placeholder.com/300x200?text=Project+2" alt="Project 2" style="width:100%; border-radius:10px;">
-    <img src="https://via.placeholder.com/300x200?text=Project+3" alt="Project 3" style="width:100%; border-radius:10px;">
-    <img src="https://via.placeholder.com/300x200?text=Project+4" alt="Project 4" style="width:100%; border-radius:10px;">
+
+  <div class="section gallery">
+    <h2 class="red-title">Project Gallery</h2>
+    <p>Here are some examples of our recent work. More coming soon!</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1em;">
+      <img src="https://via.placeholder.com/300x200?text=Project+1" alt="Project 1" style="width:100%; border-radius:10px;">
+      <img src="https://via.placeholder.com/300x200?text=Project+2" alt="Project 2" style="width:100%; border-radius:10px;">
+      <img src="https://via.placeholder.com/300x200?text=Project+3" alt="Project 3" style="width:100%; border-radius:10px;">
+      <img src="https://via.placeholder.com/300x200?text=Project+4" alt="Project 4" style="width:100%; border-radius:10px;">
+    </div>
   </div>
-</div>
+
   <div class="section testimonials">
     <h2 class="red-title">What Our Customers Say</h2>
     <div class="testimonial-slider">
@@ -152,14 +162,16 @@
       <button type="submit">Send Message</button>
     </form>
   </div>
-<div class="barter-message" style="text-align:center; padding: 2rem; background-color: #f5f5f5; font-size: 1.1rem;">
-  <p>
-    <strong>We also accept trades!</strong><br>
-    Got an RV, trailer, motorcycle, land, or other assets? No problem.<br>
-    We believe in the barter system. If you’ve got something of value but not the cash, give us a call.<br>
-    Let's work something out and get your home painted!
-  </p>
-</div>
+
+  <div class="barter-message">
+    <p>
+      <strong>We also accept trades!</strong><br>
+      Got an RV, trailer, motorcycle, land, or other assets? No problem.<br>
+      We believe in the barter system. If you’ve got something of value but not the cash, give us a call.<br>
+      Let's work something out and get your home painted!
+    </p>
+  </div>
+
   <footer>
     <p>&copy; 2025 Reynolds Painting & Resurfacing LLC</p>
     <p>Phone: 602-526-7364 | Email: azreynoldspaintingllc@gmail.com</p>

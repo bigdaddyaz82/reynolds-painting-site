@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Reynolds Painting & Resurfacing LLC | Phoenix, AZ</title>
   <meta name="description" content="Affordable, professional painting services in Phoenix, AZ. Residential & commercial. Valley-wide. Free estimates. Call 602-526-7364.">
   <meta name="keywords" content="Phoenix painting, house painting, commercial painters, painting contractor, Arizona painter, Reynolds Painting">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Reynolds Painting & Resurfacing LLC</title>
   <style>
     body {
       margin: 0;
@@ -122,7 +119,6 @@
       max-width: 900px;
     }
 
-    /* Responsive design */
     @media (max-width: 768px) {
       body {
         font-size: 14px;
@@ -231,32 +227,33 @@
   <div class="barter-message">
     <p>
       <strong>We also accept trades!</strong><br>
-      Got an RV, trailer, motorcycle, land, Coins, or other assets? No problem.<br>
-      We believe in the barter system. If you’ve got something of value but not the cash, give us a call.<br>
-      Let's work something out and get your home painted!
-      We believe in the barter system. If you’ve got something of value but not enough cash, let’s talk! 
-      We’re open to fair trades and alternative payments — just ask during your free consultation.
+      Got an RV, trailer, motorcycle, land, coins, collectibles, or tools? Let's talk!
+    </p>
+    <p>
+      We’re all about honest work and creative deals — just give us a call!
     </p>
   </div>
 
   <footer>
-  <p>         2025 Reynolds Painting & Resurfacing LLC 
-    <a href="https://facebook.com/AZReynoldsPaintingLLC" target="_blank">Facebook</a> |
-    <a href="tel:6025267364">602-526-7364</a> |
-    <a href="mailto:azreynoldspaintingllc@gmail.com">azreynoldspaintingllc@gmail.com</a>
-  </p>
+    <p>Reynolds Painting & Resurfacing LLC | Phoenix, AZ</p>
+    <p>Call or Text: <strong>602-526-7364</strong></p>
+    <p>Email: <a href="mailto:azreynoldspaintingllc@gmail.com" style="color: white;">azreynoldspaintingllc@gmail.com</a></p>
+    <div class="footer-links">
+      <a href="https://www.facebook.com/ReynoldsPaintingandResurfacingLLC" target="_blank" rel="noopener">Facebook</a>
+    </div>
+    <p>&copy; 2025 Reynolds Painting & Resurfacing LLC. All rights reserved.</p>
   </footer>
 
   <script>
+    // Simple auto testimonial rotation
     const testimonials = document.querySelectorAll('.testimonial');
     let index = 0;
 
     setInterval(() => {
-      testimonials[index].classList.remove('active');
+      testimonials.forEach(t => t.classList.remove('active'));
       index = (index + 1) % testimonials.length;
       testimonials[index].classList.add('active');
-    }, 4000);
+    }, 5000);
   </script>
-
 </body>
 </html>

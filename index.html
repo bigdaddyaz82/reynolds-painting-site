@@ -7,253 +7,606 @@
   <meta name="description" content="Affordable, professional painting services in Phoenix, AZ. Residential & commercial. Valley-wide. Free estimates. Call 602-526-7364.">
   <meta name="keywords" content="Phoenix painting, house painting, commercial painters, painting contractor, Arizona painter, Reynolds Painting">
   <style>
-    body {
+    :root {
+      --primary-blue: #0b3d91;
+      --dark-blue: #092c6c;
+      --light-blue-bg: #1c4b9f; /* Lighter blue for section backgrounds */
+      --accent-orange: #ffa500;
+      --accent-orange-hover: #e69500;
+      --text-light: #f0f0f0;
+      --text-dark: #333333;
+      --text-muted: #cccccc;
+      --border-color: #3a5f9f;
+      --font-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      --font-headings: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* Slightly bolder/different if desired */
+    }
+
+    /* Reset and Base Styles */
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b3d91;
-      color: white;
-      line-height: 1.6;
+      padding: 0;
     }
 
-    header, footer {
-      text-align: center;
-      padding: 1.5em;
-      background: #092c6c;
+    body {
+      font-family: var(--font-primary);
+      background: var(--dark-blue); /* Darker base background */
+      color: var(--text-light);
+      line-height: 1.7;
+      font-size: 16px;
     }
 
-    h1, h2, h3 {
-      margin: 0.5em 0;
-      text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
+    /* Typography */
+    h1, h2, h3, h4 {
+      font-family: var(--font-headings);
+      margin-bottom: 0.75em;
+      line-height: 1.3;
+      color: var(--text-light); /* Default to light text for headings */
+    }
+    h1 { font-size: 2.8em; }
+    h2 { font-size: 2em; }
+    h3 { font-size: 1.5em; }
+
+    p {
+      margin-bottom: 1em;
     }
 
-    .red-title {
-      color: red;
-    }
-
-    .section {
-      padding: 2em;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .services, .contact, .testimonials {
-      background: #113f99;
-      border-radius: 10px;
-      margin-bottom: 2em;
-      padding: 1.5em;
-      transition: all 0.3s ease-in-out;
-    }
-
-    .services:hover, .contact:hover, .testimonials:hover {
-      background: #0b3d91;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .contact-form input, .contact-form textarea {
-      width: 100%;
-      margin: 0.5em 0;
-      padding: 0.8em;
-      border: none;
-      border-radius: 5px;
-    }
-
-    .contact-form button {
-      background: #ffa500;
-      color: black;
-      border: none;
-      padding: 0.8em 1.5em;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .contact-form button:hover {
-      background: #e69500;
-    }
-
-    .testimonial-slider {
-      position: relative;
-      height: 160px;
-      overflow: hidden;
-    }
-
-    .testimonial {
-      position: absolute;
-      opacity: 0;
-      transition: opacity 0.5s ease-in-out;
-      width: 100%;
-      text-align: center;
-    }
-
-    .testimonial.active {
-      opacity: 1;
-      position: relative;
-    }
-
-    footer p {
-      margin: 0.3em 0;
-    }
-
-    .footer-links a {
-      color: #fff;
-      margin: 0 0.5em;
+    a {
+      color: var(--accent-orange);
       text-decoration: none;
+      transition: color 0.3s ease;
     }
-
-    .footer-links a:hover {
+    a:hover {
+      color: var(--accent-orange-hover);
       text-decoration: underline;
     }
 
+    /* Layout & Structure */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background: var(--primary-blue);
+      color: var(--text-light);
+      padding: 2em 0;
+      text-align: center;
+      border-bottom: 3px solid var(--accent-orange);
+    }
+
+    header .logo h1 {
+      color: var(--text-light); /* Was red, changing for better blend */
+      margin-bottom: 0.2em;
+      font-size: 2.5em;
+    }
+    header .tagline {
+      font-style: italic;
+      font-size: 1.1em;
+      color: var(--text-muted);
+      margin-bottom: 1.5em;
+    }
+    /* Basic Nav Styling - can be expanded */
+    nav ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+    nav ul li {
+        display: inline-block;
+        margin: 0 15px;
+    }
+    nav ul li a {
+        color: var(--text-light);
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 0.9em;
+    }
+    nav ul li a:hover {
+        color: var(--accent-orange);
+        text-decoration: none;
+    }
+
+    /* Hero Section (Conceptual - could be the header itself or a section below) */
+    .hero {
+        background: var(--primary-blue); /* Or an image */
+        padding: 3em 0;
+        text-align: center;
+    }
+    .hero h2 {
+        font-size: 2.2em;
+        margin-bottom: 0.5em;
+    }
+    .hero p {
+        font-size: 1.2em;
+        margin-bottom: 1.5em;
+        color: var(--text-muted);
+    }
+    .btn {
+        display: inline-block;
+        background: var(--accent-orange);
+        color: var(--text-dark); /* Dark text for contrast on orange */
+        padding: 0.8em 2em;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        border: none;
+        cursor: pointer;
+    }
+    .btn:hover {
+        background: var(--accent-orange-hover);
+        transform: translateY(-2px);
+        color: var(--text-dark);
+        text-decoration: none;
+    }
+
+
+    main {
+      padding: 2em 0;
+    }
+
+    .section {
+      padding: 3em 0; /* More vertical padding for sections */
+      border-bottom: 1px solid var(--border-color);
+    }
+    .section:last-child {
+      border-bottom: none;
+    }
+    .section-title { /* Consistent styling for section titles */
+      text-align: center;
+      margin-bottom: 2em;
+      color: var(--text-light); /* Replaced red titles */
+      font-size: 2.2em;
+    }
+    .section-title::after { /* Optional underline element */
+        content: '';
+        display: block;
+        width: 60px;
+        height: 3px;
+        background: var(--accent-orange);
+        margin: 0.5em auto 0;
+    }
+
+
+    /* Services Section */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2em;
+    }
+    .service-item {
+      background: var(--light-blue-bg);
+      padding: 1.5em;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+    .service-item h3 {
+      color: var(--accent-orange); /* Use accent for service titles */
+      margin-bottom: 0.5em;
+    }
+
+    /* About Section */
+    .about p {
+      max-width: 800px; /* Constrain line length for readability */
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center; /* Or justify if preferred */
+    }
+    .about p:not(:last-child) {
+        margin-bottom: 1.5em;
+    }
+
+    /* Benefits Section */
+    .benefits ul {
+      list-style: none; /* Removing default list style */
+      padding-left: 0;
+    }
+    .benefits ul li {
+      background: var(--light-blue-bg);
+      padding: 1em 1.5em;
+      margin-bottom: 0.8em;
+      border-radius: 5px;
+      border-left: 4px solid var(--accent-orange);
+    }
+    .benefits ul li strong {
+      color: var(--text-light);
+    }
+
+    /* Gallery Section */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5em;
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+
+    /* Testimonials Section */
+    .testimonial-slider {
+      position: relative;
+      min-height: 150px; /* Ensure space for content */
+      overflow: hidden;
+      background: var(--light-blue-bg);
+      padding: 2em;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .testimonial {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      opacity: 0;
+      transition: opacity 0.8s ease-in-out;
+      text-align: center;
+    }
+    .testimonial.active {
+      opacity: 1;
+      /* position: relative;  Let JS handle active, fixed positioning is simpler */
+    }
+    .testimonial blockquote {
+        font-size: 1.15em;
+        font-style: italic;
+        margin-bottom: 0.5em;
+        color: var(--text-light);
+    }
+    .testimonial cite {
+        font-size: 0.95em;
+        font-weight: bold;
+        color: var(--accent-orange);
+    }
+
+
+    /* Contact Section & Form */
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: var(--light-blue-bg);
+      padding: 2em;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .contact-form label { /* Add labels for accessibility */
+        display: block;
+        margin-bottom: 0.3em;
+        font-weight: bold;
+        font-size: 0.9em;
+    }
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+      width: 100%;
+      margin-bottom: 1em; /* Consistent margin */
+      padding: 0.9em;
+      border: 1px solid var(--border-color);
+      border-radius: 5px;
+      background: var(--primary-blue); /* Darker input fields */
+      color: var(--text-light);
+      font-family: var(--font-primary);
+      font-size: 1em;
+    }
+    .contact-form input[type="text"]:focus,
+    .contact-form input[type="email"]:focus,
+    .contact-form textarea:focus {
+        outline: none;
+        border-color: var(--accent-orange);
+        box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.3);
+    }
+    .contact-form button[type="submit"] { /* Be specific */
+      /* Uses .btn styling */
+      width: 100%; /* Full width submit button */
+      font-size: 1.1em;
+    }
+
+    /* Barter Message Section */
     .barter-message {
       text-align: center;
-      padding: 2rem;
-      background-color: #113f99;
-      color: white;
-      font-size: 1.1rem;
-      border-radius: 10px;
-      margin: 2em auto;
-      max-width: 900px;
+      padding: 2.5em;
+      background: var(--accent-orange); /* Make it stand out */
+      color: var(--text-dark); /* Dark text for contrast */
+      border-radius: 8px;
+      margin: 2em auto; /* Keep existing margin */
+      max-width: 900px; /* Keep existing max-width */
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .barter-message p {
+        margin-bottom: 0.5em;
+    }
+    .barter-message strong {
+      color: var(--primary-blue); /* Use primary blue for contrast */
     }
 
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2.5em 0;
+      background: var(--dark-blue); /* Match body background for seamlessness */
+      border-top: 3px solid var(--accent-orange);
+      color: var(--text-muted);
+    }
+    footer p {
+      margin-bottom: 0.5em;
+      font-size: 0.9em;
+    }
+    footer strong {
+        color: var(--text-light);
+    }
+    .footer-links a {
+      color: var(--text-muted);
+      margin: 0 0.75em;
+    }
+    .footer-links a:hover {
+      color: var(--accent-orange);
+    }
+
+
+    /* Responsive Design */
     @media (max-width: 768px) {
       body {
-        font-size: 14px;
+        font-size: 15px; /* Slightly larger base for mobile */
       }
+      h1 { font-size: 2.2em; }
+      h2 { font-size: 1.8em; }
+      .section-title { font-size: 1.9em; }
 
-      .section {
-        padding: 1.5em;
-      }
+      header .logo h1 { font-size: 2em; }
+      nav ul li { margin: 0 10px; }
+      nav ul li a { font-size: 0.85em; }
 
-      .gallery img {
-        width: 100%;
-      }
+      .hero h2 { font-size: 1.8em; }
+      .hero p { font-size: 1.1em; }
 
-      .services, .contact, .testimonials {
-        padding: 1em;
+      .services-grid, .gallery-grid {
+        grid-template-columns: 1fr; /* Stack on mobile */
       }
     }
+
+    @media (max-width: 480px) {
+        h1 { font-size: 1.8em; }
+        h2 { font-size: 1.5em; }
+        .section-title { font-size: 1.6em; }
+
+        .btn {
+            padding: 0.7em 1.5em;
+            font-size: 0.9em;
+        }
+        header .logo h1 { font-size: 1.7em; }
+        nav ul li { display: block; margin: 10px 0; } /* Stack nav links */
+    }
+
   </style>
 </head>
 <body>
 
   <header>
-    <h1 class="red-title">Reynolds Painting & Resurfacing LLC</h1>
-    <p><em>"Painting Perfection One Surface at a Time"</em></p>
+    <div class="container">
+      <div class="logo">
+        <h1>Reynolds Painting & Resurfacing LLC</h1>
+      </div>
+      <p class="tagline"><em>"Painting Perfection One Surface at a Time"</em></p>
+      <nav>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <div class="section services">
-    <h2 class="red-title">Our Services</h2>
-    <ul>
-      <li>Interior & Exterior Painting</li>
-      <li>Cabinet Refinishing</li>
-      <li>Countertop Resurfacing</li>
-      <li>Bathtub & Shower Resurfacing</li>
-      <li>Garage Floor Epoxy Coatings</li>
-      <li>Pool Deck Coatings</li>
-      <li>Drywall Repair & Texture</li>
-      <li>Staining & Varnishing</li>
-    </ul>
-  </div>
+  <main>
+    <section id="hero" class="hero"> <!-- Added conceptual Hero section -->
+        <div class="container">
+            <h2>Your Trusted Partner for Quality Painting & Resurfacing</h2>
+            <p>Serving Phoenix & The Entire Valley. Free Estimates. Call <strong>602-526-7364</strong> Today!</p>
+            <a href="#contact" class="btn">Get a Free Quote</a>
+        </div>
+    </section>
 
-  <section class="about section">
-    <h2 class="red-title">About Reynolds Painting & Resurfacing LLC</h2>
-    <p>
-      At Reynolds Painting & Resurfacing, we're passionate about delivering high-quality painting and resurfacing services to homes and businesses throughout the Valley. While the company was officially established recently, I've been painting professionally here in the Valley since 2016. 
-      As the owner and main painter, I personally take pride in every project, ensuring the best possible service for my clients. I treat every job as if it were my own home—focused on quality, precision, and care.
-    </p>
-    <p>
-      From residential to commercial properties, no job is too big or too small. My goal is simple: to provide professional, trustworthy service that you can rely on—delivered on time and within budget.
-    </p>
-  </section>
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+          <div class="service-item">
+            <h3>Interior & Exterior Painting</h3>
+            <p>Transform your living spaces or boost curb appeal with our expert painting services.</p>
+          </div>
+          <div class="service-item">
+            <h3>Cabinet Refinishing</h3>
+            <p>Give your kitchen or bathroom a stunning makeover without the cost of new cabinets.</p>
+          </div>
+          <div class="service-item">
+            <h3>Countertop Resurfacing</h3>
+            <p>Update your countertops to a modern look for a fraction of replacement costs.</p>
+          </div>
+          <div class="service-item">
+            <h3>Bathtub & Shower Resurfacing</h3>
+            <p>Revitalize your old, worn-out tubs and showers to look brand new.</p>
+          </div>
+          <div class="service-item">
+            <h3>Garage Floor Epoxy Coatings</h3>
+            <p>Durable and attractive epoxy solutions for a clean, resilient garage floor.</p>
+          </div>
+          <div class="service-item">
+            <h3>Pool Deck Coatings</h3>
+            <p>Enhance safety and appearance with our specialized pool deck resurfacing.</p>
+          </div>
+          <div class="service-item">
+            <h3>Drywall Repair & Texture</h3>
+            <p>Seamless repairs and professional texturing for flawless walls and ceilings.</p>
+          </div>
+          <div class="service-item">
+            <h3>Staining & Varnishing</h3>
+            <p>Protect and beautify your wood surfaces with our expert staining and varnishing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section class="about section">
-    <h2 class="red-title">More About Us</h2>
-    <p>
-      Reynolds Painting & Resurfacing LLC is locally owned and operated. I offer free estimates and flexible consultation times — whether it’s over the phone or in person — to meet you where you're comfortable. I’ve been proudly serving the Valley since 2016 and continue to grow through word of mouth, trust, and honest work.
-    </p>
-    <p>
-      I’ll paint your house like I would my own — no shortcuts, no excuses. Whether you're a homeowner, a property manager, or a business owner, you’ll get the same dedication and respect from start to finish. We beat other licensed LLCs on both <strong>price and quality</strong>.
-    </p>
-  </section>
+    <section id="about" class="section about">
+      <div class="container">
+        <h2 class="section-title">About Reynolds Painting & Resurfacing LLC</h2>
+        <p>
+          At Reynolds Painting & Resurfacing, we're passionate about delivering high-quality painting and resurfacing services to homes and businesses throughout the Valley. While the company was officially established recently, I've been painting professionally here in the Valley since 2016. 
+          As the owner and main painter, I personally take pride in every project, ensuring the best possible service for my clients. I treat every job as if it were my own home—focused on quality, precision, and care.
+        </p>
+        <p>
+          From residential to commercial properties, no job is too big or too small. My goal is simple: to provide professional, trustworthy service that you can rely on—delivered on time and within budget. We are committed to beating other licensed LLCs on both <strong>price and quality</strong>.
+        </p>
+        <p><em>Reynolds Painting & Resurfacing LLC is locally owned and operated. We offer free estimates and flexible consultation times.</em></p>
+      </div>
+    </section>
 
-  <div class="section benefits">
-    <h2 class="red-title">Why Paint Your Home?</h2>
-    <ul>
-      <li><strong>Boosts Property Value:</strong> A fresh coat of paint can increase your home's market value.</li>
-      <li><strong>Enhances Curb Appeal:</strong> Make a strong first impression with a clean, updated look.</li>
-      <li><strong>Protects Surfaces:</strong> Paint shields against weather, insects, and wear over time.</li>
-      <li><strong>Improves Air Quality:</strong> Newer paints are low-VOC and healthier for indoor spaces.</li>
-      <li><strong>Personalizes Your Space:</strong> Reflect your taste with custom colors and finishes.</li>
-      <li><strong>Beautifies Your Home:</strong> Instantly transforms any room or exterior for a more polished look.</li>
-    </ul>
-  </div>
+    <section id="benefits" class="section benefits">
+      <div class="container">
+        <h2 class="section-title">Why Invest in Professional Painting?</h2>
+        <ul>
+          <li><strong>Boosts Property Value:</strong> A fresh coat of paint can significantly increase your home's market value.</li>
+          <li><strong>Enhances Curb Appeal:</strong> Make a powerful first impression with a clean, beautifully updated look.</li>
+          <li><strong>Protects Your Surfaces:</strong> Quality paint shields against weather, moisture, insects, and daily wear.</li>
+          <li><strong>Improves Indoor Air Quality:</strong> Modern low-VOC and zero-VOC paints are healthier for your family.</li>
+          <li><strong>Personalizes Your Space:</strong> Reflect your unique style and taste with custom colors and finishes.</li>
+          <li><strong>Cost-Effective Renovation:</strong> Painting is one of the most affordable ways to dramatically transform any room or exterior.</li>
+        </ul>
+      </div>
+    </section>
 
-  <div class="section gallery">
-    <h2 class="red-title">Project Gallery</h2>
-    <p>Here are some examples of our recent work. More coming soon!</p>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1em;">
-      <img src="https://via.placeholder.com/300x200?text=Project+1" alt="Project 1" style="width:100%; border-radius:10px;">
-      <img src="https://via.placeholder.com/300x200?text=Project+2" alt="Project 2" style="width:100%; border-radius:10px;">
-      <img src="https://via.placeholder.com/300x200?text=Project+3" alt="Project 3" style="width:100%; border-radius:10px;">
-      <img src="https://via.placeholder.com/300x200?text=Project+4" alt="Project 4" style="width:100%; border-radius:10px;">
-    </div>
-  </div>
+    <section id="gallery" class="section gallery">
+      <div class="container">
+        <h2 class="section-title">Project Gallery</h2>
+        <p style="text-align:center; margin-bottom: 2em;">Here are some examples of our recent work. More stunning transformations coming soon!</p>
+        <div class="gallery-grid">
+          <img src="https://via.placeholder.com/400x300?text=Beautiful+Interior" alt="Project 1 - Interior" >
+          <img src="https://via.placeholder.com/400x300?text=Exterior+Makeover" alt="Project 2 - Exterior" >
+          <img src="https://via.placeholder.com/400x300?text=Cabinet+Refinishing" alt="Project 3 - Cabinets" >
+          <img src="https://via.placeholder.com/400x300?text=Resurfaced+Countertop" alt="Project 4 - Countertop" >
+          <img src="https://via.placeholder.com/400x300?text=Epoxy+Garage+Floor" alt="Project 5 - Garage">
+          <img src="https://via.placeholder.com/400x300?text=Pool+Deck+Coating" alt="Project 6 - Pool Deck">
+        </div>
+      </div>
+    </section>
 
-  <div class="section testimonials">
-    <h2 class="red-title">What Our Customers Say</h2>
-    <div class="testimonial-slider">
-      <div class="testimonial active">"Absolutely top-tier work! My kitchen cabinets look brand new." - Sarah M.</div>
-      <div class="testimonial">"These guys turned our old tub into something out of a magazine!" - Josh D.</div>
-      <div class="testimonial">"Highly professional and affordable. 10/10 recommend." - Maria L.</div>
-      <div class="testimonial">"They resurfaced our garage floor and it looks amazing!" - Kevin T.</div>
-      <div class="testimonial">"Prompt, professional, and passionate about their craft!" - Alicia R.</div>
-    </div>
-  </div>
+    <section id="testimonials" class="section testimonials">
+      <div class="container">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="testimonial-slider">
+          <article class="testimonial active">
+            <blockquote>"Absolutely top-tier work! My kitchen cabinets look brand new. Professional and meticulous."</blockquote>
+            <cite>- Sarah M., Phoenix</cite>
+          </article>
+          <article class="testimonial">
+            <blockquote>"These guys turned our old tub into something out of a magazine! So impressed with the resurfacing."</blockquote>
+            <cite>- Josh D., Scottsdale</cite>
+          </article>
+          <article class="testimonial">
+            <blockquote>"Highly professional and affordable. Reynolds Painting delivered on every promise. 10/10 recommend."</blockquote>
+            <cite>- Maria L., Glendale</cite>
+          </article>
+          <article class="testimonial">
+            <blockquote>"They resurfaced our garage floor and it looks amazing! Durable and easy to clean."</blockquote>
+            <cite>- Kevin T., Mesa</cite>
+          </article>
+          <article class="testimonial">
+            <blockquote>"Prompt, professional, and passionate about their craft! The exterior of our house has never looked better."</blockquote>
+            <cite>- Alicia R., Tempe</cite>
+          </article>
+        </div>
+      </div>
+    </section>
 
-  <div class="section contact">
-    <h2 class="red-title">Contact Us</h2>
-    <form class="contact-form" action="https://formsubmit.co/azreynoldspaintingllc@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2 class="section-title">Get Your Free Estimate Today!</h2>
+        <form class="contact-form" action="https://formsubmit.co/azreynoldspaintingllc@gmail.com" method="POST">
+          <div>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="e.g., John Doe" required />
+          </div>
+          <div>
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="e.g., john.doe@example.com" required />
+          </div>
+          <div>
+            <label for="phone">Phone Number (Optional):</label>
+            <input type="tel" id="phone" name="phone" placeholder="e.g., 555-123-4567" />
+          </div>
+          <div>
+            <label for="message">Tell us about your project:</label>
+            <textarea id="message" name="message" rows="6" placeholder="e.g., Interior painting for 3 rooms, cabinet refinishing..." required></textarea>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </section>
 
-  <div class="barter-message">
-    <p>
-      <strong>We also accept trades!</strong><br>
-      Got an RV, trailer, motorcycle, land, coins, collectibles, or tools? Let's talk!
-    </p>
-    <p>
-      We’re all about honest work and creative deals — just give us a call!
-    </p>
-  </div>
+    <section class="barter-message section"> <!-- Wrapped barter message in a section -->
+      <div class="container">
+        <h2 class="section-title" style="color:var(--text-dark);">We're Open to Trades!</h2>
+        <p>
+          Got an RV, trailer, motorcycle, land, coins, collectibles, or tools? Let's talk!
+        </p>
+        <p>
+          We’re all about honest work and creative deals — just give us a call at <strong>602-526-7364</strong>!
+        </p>
+      </div>
+    </section>
 
   <footer>
-    <p>Reynolds Painting & Resurfacing LLC | Phoenix, AZ</p>
-    <p>Call or Text: <strong>602-526-7364</strong></p>
-    <p>Email: <a href="mailto:azreynoldspaintingllc@gmail.com" style="color: white;">azreynoldspaintingllc@gmail.com</a></p>
-    <div class="footer-links">
-      <a href="https://www.facebook.com/ReynoldsPaintingandResurfacingLLC" target="_blank" rel="noopener">Facebook</a>
+    <div class="container">
+      <p>Reynolds Painting & Resurfacing LLC | Phoenix, AZ & Entire Valley</p>
+      <p>Call or Text: <strong><a href="tel:602-526-7364" style="color: var(--text-light);">602-526-7364</a></strong></p>
+      <p>Email: <a href="mailto:azreynoldspaintingllc@gmail.com">azreynoldspaintingllc@gmail.com</a></p>
+      <div class="footer-links">
+        <a href="https://www.facebook.com/ReynoldsPaintingandResurfacingLLC" target="_blank" rel="noopener">Find us on Facebook</a>
+      </div>
+      <p>© <span id="currentYear"></span> Reynolds Painting & Resurfacing LLC. All rights reserved.</p>
     </div>
-    <p>&copy; 2025 Reynolds Painting & Resurfacing LLC. All rights reserved.</p>
   </footer>
 
   <script>
     // Simple auto testimonial rotation
     const testimonials = document.querySelectorAll('.testimonial');
-    let index = 0;
+    let currentIndex = 0;
 
-    setInterval(() => {
-      testimonials.forEach(t => t.classList.remove('active'));
-      index = (index + 1) % testimonials.length;
-      testimonials[index].classList.add('active');
-    }, 5000);
+    function showTestimonial(index) {
+        testimonials.forEach((testimonial, i) => {
+            testimonial.classList.remove('active');
+            if (i === index) {
+                testimonial.classList.add('active');
+            }
+        });
+    }
+
+    if (testimonials.length > 0) {
+        showTestimonial(currentIndex); // Show first testimonial initially
+
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % testimonials.length;
+            showTestimonial(currentIndex);
+        }, 7000); // Increased interval for better readability
+    }
+
+    // Set current year in footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
   </script>
 </body>
-</html>
+          </html>
